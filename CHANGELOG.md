@@ -1,3 +1,7 @@
+## 1.20.0
+
+* Added `tags` to `groundcover_dashboard` — an optional list of free-text strings for organizing dashboards. Sent on create/update and read back during refresh and import. Tag order and casing are preserved by the backend (it only trims surrounding whitespace and drops exact duplicates), so a supplied list round-trips without drift; leaving the attribute unset keeps the dashboard untagged. Requires the groundcover SDK version that adds `Tags` to the dashboard request/response models (bump `github.com/groundcover-com/groundcover-sdk-go` accordingly)
+
 ## 1.19.0
 
 * Added `query.evaluation_delay` to `groundcover_monitor_v2` and `groundcover_monitor_v2_json` — an optional evaluation delay expressed as a duration from `0s` to `1h` (e.g. `15m`, `900s`; whole seconds only, the backend limit is 3600 seconds) that delays query evaluation to account for late-arriving data. Sent on create/update and read back during refresh and import
