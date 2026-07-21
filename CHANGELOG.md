@@ -1,6 +1,7 @@
 ## 1.20.0
 
-* Added `tags` to `groundcover_dashboard` — an optional list of free-text strings for organizing dashboards. Sent on create/update and read back during refresh and import. Tag order and casing are preserved by the backend (it only trims surrounding whitespace and drops exact duplicates), so a supplied list round-trips without drift; leaving the attribute unset keeps the dashboard untagged. Requires the groundcover SDK version that adds `Tags` to the dashboard request/response models (bump `github.com/groundcover-com/groundcover-sdk-go` accordingly)
+* Added `tags` to `groundcover_dashboard` — an optional list of free-text strings for organizing dashboards. Sent on create/update and read back during refresh and import. Tag order and casing are preserved by the backend (it only trims surrounding whitespace and drops exact duplicates), so a supplied list round-trips without drift; leaving the attribute unset keeps the dashboard untagged
+* Updated groundcover SDK to v1.360.0 (adds `Tags` to the dashboard request/response models)
 
 ## 1.19.0
 
